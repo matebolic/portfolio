@@ -8,18 +8,282 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+            text-align: justify;
+        }
+
+        .navbar-custom {
+            background-color: #628b67;
+        }
+
+        .navbar-custom,
+        .navbar-nav,
+        .nav-link {
+            color: #FFFFFF;
+            text-transform: uppercase;
+        }
+
+        hr {
+            border: none;
+            border-top: 4px solid #628b67;
+            ;
+            border-radius: 2px;
+        }
+
+        .card {
+            border: 4px solid #d4d2d2;
+            border-radius: 8px;
+        }
+
+        .skill:hover {
+            text-decoration: underline;
+        }
+
+        .contact {
+            margin: 20px;
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+            font-weight: 700;
+        }
+    </style>
 </head>
 
 <body>
 
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus ad quia deleniti modi itaque sed dicta
-        sequi harum ea rerum? Hic autem debitis adipisci necessitatibus sequi fugit quasi maiores sapiente odio deserunt
-        vitae dolorem possimus, asperiores dolores consectetur molestias quidem?</p>
+    <!-- starts: general without login -->
+    <nav class="navbar-custom navbar navbar-expand-sm fw-bold">
+        <div class="container-md">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About me</a>
+                    </li>
+                    <li><a class="nav-link" href="#skills">Skills</a></li>
+                    <li><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                    <li><a class="nav-link" href="#contact">Contact</a></li>
+                    <li><a class="nav-link" href="src/main/resources/pdf/Balazs_Mate_CV_actual.pdf" target=”_blank">CV</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- ends: general without login -->
+
+    <section>
+        <div class="container-md">
+            <div class="row pt-1 mt-3 justify-content-start">
+                <h1>Balázs Máté</h1>
+            </div>
+            <div class="row pt-1 justify-content-start">
+                <h3 class="fw-light">junior java developer</h3>
+            </div>
+            <div class="row p-1 mt-3 justify-content-center">
+                <p>Welcome to my backend developer portfolio! As a junior-level developer, I'm excited to share my
+                    journey and showcase projects that represent my dedication to mastering backend development.
+                    Each project reflects my passion for
+                    learning and problem-solving. Take a moment to explore my work.
+                </p>
+            </div>
+        </div>
+    </section>
 
 
-    <p>another paragraph: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia voluptatum exercitationem
-        consequatur, saepe porro accusantium reiciendis eum eligendi omnis beatae.</p>
 
+    <section id="about">
+        <div class="container-md">
+            <div class="row p-1 my-1 justify-content-center">
+                <h4>About me</h4>
+            </div>
+            <div class="row p-1 my-1 justify-content-between">
+                <div class="col-sm-9">
+                    <p>As a former architect and designer, I bring a wealth of experience and a unique
+                        perspective to my new career path as a Java Developer. Throughout my career, I've
+                        thrived in both corporate environments and as a self-employed professional, demonstrating
+                        adaptability and a strong work ethic. Collaborating with teams has been particularly inspiring,
+                        fostering my passion for continuous learning and knowledge sharing. My background in teaching at
+                        a technical secondary school further highlights my commitment to mentorship and skill
+                        development.
+                    </p>
+                    <p> In my role as a designer, I've navigated unforeseen challenges with creativity and pragmatism,
+                        consistently meeting deadlines and exceeding expectations. Managing multiple tasks concurrently
+                        has honed my ability to maintain focus and efficiency, while my innate curiosity drives me to
+                        seek out innovative solutions. Transitioning to software development was a natural evolution,
+                        fueled by my fascination with technology and a desire to create impactful solutions.</p>
+                    <p>Proficient in various design software, I embarked on my coding journey in 2022, discovering a
+                        true passion for software development. I am excited about the opportunity to combine my
+                        architectural expertise with my newfound passion for coding.</p>
+                    <p>I live in Szeged with my wife. In my freetime I love to travel, taking photos and having long
+                        walks. I am a recent owner of a cat. :]</p>
+
+
+                </div>
+                <div class="col-sm-3"><img src="/src/main/resources/static/jpg/mb_profil.jpg" width="200px"></div>
+
+
+            </div>
+            <hr>
+        </div>
+    </section>
+
+
+    <section id="skills">
+        <div class="container-md">
+            <div class="row p-1 my-1 justify-content-center">
+                <h4>My skills</h4>
+            </div>
+
+            <div class="skilllist row p-1 my-1 justify-content-start fw-light fw-italic">
+                <div class="col-sm-12 col-md-12">
+                    <div class="d-flex flex-wrap justify-content-start">
+                        <span class="skill mx-2">Java</span>
+                        <span class="skill mx-2">Spring Boot</span>
+                        <span class="skill mx-2">Spring Framework</span>
+                        <span class="skill mx-2">Git+GitHub</span>
+                        <span class="skill mx-2">SQL</span>
+                        <span class="skill mx-2">RestAPI</span>
+                        <span class="skill mx-2">Linux</span>
+                        <span class="skill mx-2">JSON</span>
+                        <span class="skill mx-2">Gradle</span>
+                        <span class="skill mx-2">Design Thinking</span>
+                        <span class="skill mx-2">Docker</span>
+                        <span class="skill mx-2">JUnit</span>
+                    </div>
+                </div>
+            </div>
+            <hr>
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <div class="container-md">
+            <div class="row p-1 my-1 justify-content-start">
+                <h4>Portfolio</h4>
+            </div>
+            <div class="row p-1 my-1 justify-content-center">
+
+                <div class="col-sm-5 m-1">
+                    <div class="card">
+                        <img src="/src/main/resources/static/jpg/p1_minesweeper_ps_0.png" class="card-img-top"
+                            alt="Minesweeper">
+                        <div class="card-body">
+                            <h5 class="card-title">Minesweeper</h5>
+                            <h7 class="fw-italic fw-light">2023-06</h7>
+                            <p class="card-text">This was my the first complex program, which was created without
+                                knowing data structures or any other advanced solutions from java.</p>
+                            <a href="/src/main/resources/templates/minesweeper.html" class="btn btn-dark">More</a>
+                            <a href="https://github.com/matebolic/minesweeper" target=”_blank"><img
+                                    src="/src/main/resources/static/tech_icons/github.png" alt="github"
+                                    width="40px"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-5 m-1">
+                    <div class="card">
+                        <img src="/src/main/resources/static/jpg/p2_school_system_class_data.jpg" class="card-img-top"
+                            alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">School System</h5>
+                            <h7 class="fw-italic fw-light">2023-11</h7>
+                            <p class="card-text">A complex java based program where several functions are available such
+                                as
+                                filling the diary or calculate the averages of the class</p>
+                            <a href="/src/main/resources/templates/schoolsystem.html" class="btn btn-dark">More</a>
+                            <a href="https://github.com/balamat/II_projekt_School-system" target=”_blank"><img
+                                    src="/src/main/resources/static/tech_icons/github.png" alt="github"
+                                    width="40px"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-5 m-1">
+                    <div class="card">
+                        <img src="/src/main/resources/static/jpg/p3_bank_ps_1.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Bank System API</h5>
+                            <h7 class="fw-italic fw-light">2024-02</h7>
+                            <p class="card-text">It was the final project at Flow Academy's Junior Java Developer
+                                Course, where I made my first Spring Boot based web application.</p>
+                            <a href="/src/main/resources/templates/bank.html" class="btn btn-dark">More</a>
+                            <a href="https://github.com/b8nyiand/flow_work_earth_spring/tree/balazs-mate/projects/balazs-mate/bank"
+                                target=”_blank"><img src="/src/main/resources/static/tech_icons/github.png" alt="github"
+                                    width="40px"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-5 m-1">
+                    <div class="card">
+                        <img src="https://images.pexels.com/photos/4198370/pexels-photo-4198370.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Pet Hostel</h5>
+                            <h7 class="fw-italic fw-light">2024-02 - under construction - not presented yet</h7>
+                            <p class="card-text">This is a personal project where my goal is to create a website for a
+                                pet
+                                hostel which deals with users/pets' administration.</p>
+                            <a href="/src/main/resources/templates/pethostel.html" class="btn btn-dark">More</a>
+                            <a href="https://github.com/balamat/PetHostelProject" target=”_blank"><img
+                                    src="/src/main/resources/static/tech_icons/github.png" alt="github"
+                                    width="40px"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container-md">
+            <div class="row p-1 my-1 justify-content-center">
+                <h4>Contact</h4>
+            </div>
+            <div class="row p-1 my-1 justify-content-center">
+                <div class="col"> I look forward to connecting with you and exploring potential opportunities together.
+                </div>
+            </div>
+
+            <span class="contact"> <a target="_blank" href="https://www.linkedin.com/in/balmate"><img
+                        src="https://upload.wikimedia.org/wikipedia/commons/0/01/LinkedIn_Logo.svg" width="80px"
+                        alt="linkedIn" /></a></span>
+
+            <span><a href="https://github.com/matebolic"><img src="/src/main/resources/static/tech_icons/github.png"
+                        width="40px" alt="">matebolic</a></span>
+            <span><a href="https://github.com/balamat"><img src="/src/main/resources/static/tech_icons/github.png"
+                        width="40px" alt="">balamat</a></span>
+            <span class="contact"> <a target="_blank" href="https://www.codewars.com/r/C6HkBg"><img
+                        src="https://www.codewars.com/users/matebolic/badges/small"
+                        alt="codewars badge large" /></a></span>
+
+
+    </section>
+
+    <script>
+        // Smooth scroll to section start
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const sectionId = this.getAttribute('href').slice(1);
+                const section = document.getElementById(sectionId);
+
+                section.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            });
+        });
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"

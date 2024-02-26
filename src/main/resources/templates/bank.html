@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+            text-align: justify;
+        }
+
+        .navbar-custom {
+            background-color: #4d5c58;
+        }
+
+        .navbar-custom,
+        .navbar-nav,
+        .nav-link {
+            color: #FFFFFF;
+            text-transform: uppercase;
+        }
+
+        hr {
+            border: none;
+            border-top: 4px solid #4d5c58;
+            ;
+            border-radius: 2px;
+        }
+
+        .card {
+            border: 4px solid #d4d2d2;
+            border-radius: 8px;
+        }
+
+        .skill:hover {
+            text-decoration: underline;
+        }
+
+        .contact {
+            margin: 20px;
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-md">
+        <div class="row p-1 my-1 justify-content-start">
+            <h1>Bank System API <a
+                    href="https://github.com/b8nyiand/flow_work_earth_spring/tree/balazs-mate/projects/balazs-mate/bank"
+                    target=”_blank"><img src="/src/main/resources/static/tech_icons/github.png" alt="github"
+                        width="40px"></a></h1>
+        </div>
+        <div class="skilllist row p-1 my-1 justify-content-start fw-light fw-italic">
+            <div class="justify-content-start">
+                <span class="skill mx-2">Java</span>
+                <span class="skill mx-2">Spring Boot</span>
+                <span class="skill mx-2">Spring Framework</span>
+                <span class="skill mx-2">SQL</span>
+                <span class="skill mx-2">RestAPI</span>
+                <span class="skill mx-2">JSON</span>
+                <span class="skill mx-2">Gradle</span>
+                <span class="skill mx-2">Thymeleaf</span>
+                <span class="skill mx-2">Bootstrap</span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8">
+                <h2 id="table-of-contents">Table of contents</h2>
+                <ul>
+                    <li><a href="#overview">Overview</a>
+                        <ul>
+                            <li><a href="#general-info">General info</a></li>
+                            <li><a href="#requirements">Requirements</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#my-process">My process</a>
+                        <ul>
+                            <li><a href="#screenshots">Screenshots</a></li>
+                            <li><a href="#built-with">Built with</a></li>
+                            <li><a href="#functions">Functions</a></li>
+                            <li><a href="#continued-development">Continued development</a></li>
+                            <li><a href="#what-i-learned">What I learned</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#author">Author</a></li>
+                    <li><a href="#acknowledgments">Acknowledgments</a></li>
+                </ul>
+                <h2 id="overview">Overview</h2>
+                <h3 id="general-info">General info</h3>
+                <p>According to the training schedule, the project phase lasted from 02.07.2024 to 02.17.2024,
+                    this was the implementation period, I could deal with the project in this interval.</p>
+                <h3 id="requirements">Requirements - given by Flow Academy</h3>
+                <p>The task is to create a banking API in Spring.
+                    Configure the database according to the attached UML diagram and create the entities!
+                    Tables should be generated based on the entities!
+                    Let&#39;s fill your database with some test data at startup!
+                    The creationDate fields should always be set at the time of saving!</p>
+                <p>The following functionalities are required:</p>
+                <ul>
+                    <li>Be able to add, modify, delete users, and have endpoints that where we can request a
+                        given user by name, or all users at once!</li>
+                    <li>We can create a BankAccount for each user, we can modify it, and so on delete if
+                        necessary! We need to know what belongs to User based on username to list bank accounts!
+                        Let&#39;s also be able to query bank accounts based on time!</li>
+                    <li>Have a separate controller that provided statistical data! These should be the the next
+                        ones:
+                        <ul>
+                            <li>We can retrieve the data of bank accounts whose balance is more than 3000 and a
+                                currency EUR
+                            </li>
+                            <li>We can retrieve the data of bank accounts with a lower balance, than 3000, and
+                                the currency HUF!
+                            </li>
+                            <li>We can list bank accounts whose currency is EUR!</li>
+                            <li>Be able to query bank accounts based on currency so that we enter it as a
+                                parameter in the request!
+                            </li>
+                            <li>We can query the bank accounts where the balance are higher than the given value
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <h2 id="my-process">My process</h2>
+
+                <h3 id="screenshots">Screenshots</h3>
+                <div class="row p-1 my-1 justify-content-start">
+                    <div class="col-sm-6 col-md-6">
+                        <img src="../static/jpg/p3_bank_ps_1.png" class="img-fluid gallery-img" alt="Image 2">
+                    </div>
+                    <div class="col-sm-6 col-md-6">
+                        <img src="../static/jpg/p3_bank_ps_2.png" class="img-fluid gallery-img" alt="Image 2">
+                    </div>
+                    <div class="col-sm-6 col-md-6">
+                        <img src="../static/jpg/p3_bank_ps_3.png" class="img-fluid gallery-img" alt="Image 2">
+                    </div>
+                    <div class="col-sm-6 col-md-6">
+                        <img src="../static/jpg/p3_bank_ps_4.png" class="img-fluid gallery-img" alt="Image 2">
+                    </div>
+                </div>
+
+                <h3 id="built-with">Built with</h3>
+                <ul>
+                    <li>Backend:<ul>
+                            <li>Java</li>
+                            <li>Spring Boot</li>
+                            <li>intelliJ IDE</li>
+                        </ul>
+                    </li>
+                    <li>Frontend:<ul>
+                            <li>Thymeleaf</li>
+                            <li>Bootstrap</li>
+                            <li>Visual Studio Code</li>
+                        </ul>
+                    </li>
+                    <li>General:<ul>
+                            <li>Git/GitHub</li>
+                        </ul>
+                    </li>
+                </ul>
+                <h3 id="functions">Functions</h3>
+                <p>The task was originally to create a bank API. After I had fulfilled the requirements, I started
+                    to build up a whole web application. So the program can be used as an API (main funcionality) and as
+                    a whole web application with frontend (extended functionality) too.</p>
+                <p>Actually there are the BankAccount entity and and the BankUser entity. All the user can own multiple
+                    bankcaccounts, but an account can be owned by just one owner.</p>
+                <p>Main functions:</p>
+                <ul>
+                    <li>CRUD operations - accounts</li>
+                    <li>CRUD operations - users</li>
+                    <li>Search:<ul>
+                            <li>searches by arbitrary number of conditions, e.g. bancaccounts&#39;s search
+                                fields are:
+                                <ul>
+                                    <li>creation date after a choosen date</li>
+                                    <li>creation date before a choosen date</li>
+                                    <li>minimum balance value</li>
+                                    <li>maximum balance value</li>
+                                    <li>type of currency</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>Exception and error handling</li>
+                </ul>
+                <h3 id="continued-development">Continued development</h3>
+                <p>There are several functions that I would like to implement:</p>
+                <ul>
+                    <li>create login (Spring Security) + differing user/admin functionalities</li>
+                    <li>placing the application to the web (online DB and site hosting)</li>
+                    <li>refinement of the data transfers&#39; efficiency with using DTO-s</li>
+                    <li>create new entity: transactions - users can transfer money between bankaccounts</li>
+                    <li>since the base currency of the account can differ, an external API should be implemented
+                        to transfer money according to the actual exchange rates (e.g. Hungarian National Bank&#39;s
+                        Soap API)
+                    </li>
+                    <li>Expansion of defensive programming solutions, expansion of indexing </li>
+                </ul>
+                <h3 id="what-i-learned">What I learned</h3>
+                <p>During this project period:</p>
+                <ul>
+                    <li>creating various type of JPQL queries</li>
+                    <li>exception- and error handling</li>
+                    <li>usage of Lombok </li>
+                    <li>BootStrap</li>
+                    <li>connecting the frontend and the backend using Thymeleaf HTML templates</li>
+                </ul>
+                <h2 id="author">Author</h2>
+                <ul>
+                    <li>Website - <a href="https://matebolic.github.io/portfolio/">Balázs Máté</a></li>
+                    <li>LinkedIn - <a href="https://www.linkedin.com/in/balmate">LinkedIn</a></li>
+                </ul>
+                <h2 id="acknowledgments">Acknowledgments</h2>
+                <p>I thank all the mentors for their help and guidance during the whole course.</p>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script>
+        // Smooth scroll to section start
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const sectionId = this.getAttribute('href').slice(1);
+                const section = document.getElementById(sectionId);
+
+                section.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            });
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

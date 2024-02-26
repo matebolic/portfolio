@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+            text-align: justify;
+        }
+
+        .navbar-custom {
+            background-color: #4d5c58;
+        }
+
+        .navbar-custom,
+        .navbar-nav,
+        .nav-link {
+            color: #FFFFFF;
+            text-transform: uppercase;
+        }
+
+        hr {
+            border: none;
+            border-top: 4px solid #4d5c58;
+            ;
+            border-radius: 2px;
+        }
+
+        .card {
+            border: 4px solid #d4d2d2;
+            border-radius: 8px;
+        }
+
+        .skill:hover {
+            text-decoration: underline;
+        }
+
+        .contact {
+            margin: 20px;
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-md">
+        <div class="row p-1 my-1 justify-content-center">
+            <h1>Minesweeper <a href="https://github.com/matebolic/minesweeper" target=”_blank"><img
+                        src="/src/main/resources/static/tech_icons/github.png" alt="github" width="40px"></a></h1>
+        </div>
+        <div class="skilllist row p-1 my-1 justify-content-start fw-light fw-italic">
+            <div class="justify-content-start">
+                <span class="skill mx-2">Java</span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8">
+                <p>This is a solution what I build at Flow Academy&#39;s Junior Java Developer Course.
+                    The project kickoff was on 26th June 2023, and the presentation was on 12th July 2023.</p>
+                <h2 id="table-of-contents">Table of contents</h2>
+                <ul>
+                    <li><a href="#overview">Overview</a>
+                        <ul>
+                            <li><a href="#about-the-game">About the game</a></li>
+                            <li><a href="#gameplay">Gameplay</a></li>
+                            <li><a href="#functions">Functions</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#the-process">The process</a>
+                        <ul>
+                            <li><a href="#screenshots">Screenshots</a></li>
+                            <li><a href="#built-with">Built with</a></li>
+                            <li><a href="#what-i-learned">What I learned</a></li>
+                            <li><a href="#continued-development">Continued development</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#author">Author</a></li>
+                    <li><a href="#acknowledgments">Acknowledgments</a></li>
+                </ul>
+                <h2 id="overview">Overview</h2>
+                <h3 id="about-the-game">About the game</h3>
+                <a href="https://en.wikipedia.org/wiki/Minesweeper_(video_game">Minesweeper</a> is a
+                logic puzzle video game genre generally played on personal computers. The game
+                features a grid of clickable tiles, with hidden &quot;mines&quot; (depicted as naval mines in
+                the original game) scattered throughout the board. The objective is to clear the board without
+                detonating any mines, with help from clues about the number of neighboring mines in each field.
+
+                <h3 id="gameplay">Gameplay</h3>
+                <p>In Minesweeper hidden mines are scattered throughout a board, which is divided into cells. Cells have
+                    multiple possible states:</p>
+                <ul>
+                    <li>Unopened tiles (cover the board at the start of the game, can also be made by removing flags,
+                        marked with &#39;-&#39;)</li>
+                    <li>Numbered tiles (can show 0-8: shows the number of mines are on the diagonal/adjacent to the
+                        tile)</li>
+                    <li>Flagged tiles (appear after marking an unopened tile with &#39;F&#39; - this is the sign of the
+                        Flag)</li>
+                </ul>
+                <p>An unopened cell is blank and can be selected, while an opened cell is exposed. Flagged cells are
+                    unopened cells marked by the player to indicate a potential mine location)
+                    A player selects a cell to open it. Because the game has no unique UI, it uses terminal, so
+                    selecting any tile is terminated with typing its coordinates. If a player opens a cell containing a
+                    mine, the game ends in a loss. Otherwise, the opened cell displays a number, indicating the number
+                    of mines diagonally and/or adjacent to it, and all adjacent cells will automatically be opened. This
+                    may cause a chain reaction; any blank tiles opened by other blank tiles open the surrounding tiles
+                    too. Players can also flag a cell, visualised by a flag being put on the tile, to denote that they
+                    believe a mine to be in that place.Flagged cells are still considered unopened, and may be
+                    unflagged.</p>
+                <h3 id="functions">Functions</h3>
+                <ul>
+                    <li>the game can be played on linux platform</li>
+                    <li>there are more difficulty levels, which can be choosen before the game:<ul>
+                            <li>easy(8x8 board, 10 mines)</li>
+                            <li>medium (16x16 board, 40 mines)</li>
+                            <li>hard (32x16 board, 50 mines)</li>
+                            <li>custom (custom board size with some predefined limitations - the maximum number of mines
+                                are limited according to the board area)</li>
+                        </ul>
+                    </li>
+                    <li>continous display of the available number of flags - any uncovered cell can be marked and
+                        demarked later too</li>
+                    <li>if the player succeeds to uncover all the tiles except the mines, wins: the game calculates
+                        winning points according to the diffulcty of the game and the elapsed time</li>
+                    <li>cheat function: if the player writes &quot;cheat&quot; after a tile is selected, and hits the
+                        enter, the program will show all the mines, but just until the next input</li>
+                    <li>if the player wins using cheat, then the program will print a message about this at the end of
+                        the game</li>
+                    <li>all the inputs are tested: if it is not appropriate as it may generate some exception, than it
+                        will return with a new message requiring a new input</li>
+                    <li>after finishing the game it offers a new one, the player can continue without restarting the
+                        program</li>
+                </ul>
+                <h2 id="the-process">The process</h2>
+
+                <h3 id="screenshots">Screenshots</h3>
+                <div class="row p-1 my-1 justify-content-start">
+                    <div class="col-sm-6 col-md-6">
+                        <img src="../static/jpg/p1_minesweeper_ps_3_white.png" class="img-fluid gallery-img"
+                            alt="Image 2">
+                    </div>
+                    <div class="col-sm-6 col-md-6">
+                        <img src="../static/jpg/p1_minesweeper_ps_4_white.png" class="img-fluid gallery-img"
+                            alt="Image 2">
+                    </div>
+                    <div class="col-sm-12 col-md-12">
+                        <img src="../static/jpg/p1_minesweeper_ps_5_white.png" class="img-fluid gallery-img"
+                            alt="Image 2">
+                    </div>
+                </div>
+
+                <h3 id="built-with">Built with</h3>
+                <ul>
+                    <li>IntelliJ IDE</li>
+                    <li>java</li>
+                    <li>gitHub</li>
+                </ul>
+                <h3 id="what-i-learned">What I learned</h3>
+                <p>Communication, teamwork:</p>
+                <ul>
+                    <li>This project was made by 3 of us, and our key work-method was the pair-programming.</li>
+                </ul>
+                <p>Java basics:</p>
+                <ul>
+                    <li>Practicing the java as creating a compound game was really useful and fascinating.</li>
+                </ul>
+                <p>Algorithmical thinking​:</p>
+                <ul>
+                    <li>the main procedure which was responsible for revealing the tiles based on the distance of their
+                        neighbouring mines - this was the thoughest problem.</li>
+                </ul>
+                <p>Scheduling time, the usage of escalation timeframe:</p>
+                <ul>
+                    <li>It was a part-time course therefore it was crucial to have good time management. We have to
+                        understand the meaning of the escalation time.</li>
+                </ul>
+                <h3 id="continued-development">Continued development</h3>
+                <ul>
+                    <li>New functions (hall of fame)</li>
+                    <li>Translations (actually this is written in hungarian)</li>
+                    <li>Multiplatform: modify the gaem to be playable in any OS</li>
+                    <li>Code optimization (clean code)</li>
+                </ul>
+                <h2 id="author">Author</h2>
+                <ul>
+                    <li>Flow Academy Szeged - &#39;Work Earth&#39; Junior Java Developer Course</li>
+                    <li>team: m&amp;&amp;m&amp;&amp;m’s:</li>
+                    <ul>
+                        <li>Balázs Máté</li>
+                        <li>Olivér Markovics</li>
+                        <li>Péter Mester</li>
+                    </ul>
+                </ul>
+                <h2 id="acknowledgments">Acknowledgments</h2>
+                <p>Our team mentor was available whenever we needed his advice. We were able to ask questions from all
+                    mentors and received effective help when we encountered difficulties.
+                    Thank you for all the support! Have a good game!</p>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script>
+        // Smooth scroll to section start
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const sectionId = this.getAttribute('href').slice(1);
+                const section = document.getElementById(sectionId);
+
+                section.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            });
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
